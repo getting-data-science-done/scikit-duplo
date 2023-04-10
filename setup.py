@@ -19,7 +19,7 @@ setup(
       name = "skduplo",
       packages = ["skduplo"],
       install_requires=[
-        'pandas','numpy','sklearn'
+        'pandas','numpy','scikit-learn'
       ],
       include_package_data=True,
       version = version,

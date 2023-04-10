@@ -26,5 +26,5 @@ Installation depends on the following packages:
 
     numpy
     pandas
-    sklearn
+    scikit-learn
 
