@@ -3,7 +3,8 @@
 Very simple reusable blocks for scikit-learn pipelines  (inspired by scikit-lego)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+[![PyPI](https://img.shields.io/pypi/v/scikit-duplo.svg)](https://pypi.org/project/scikit-duplo)
+[![Documentation Status](https://readthedocs.org/projects/scikit-duplo/badge/?version=latest)](https://scikit-duplo.readthedocs.io/en/latest/?badge=latest)
 
 # Installation
 
