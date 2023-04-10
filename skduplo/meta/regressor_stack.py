@@ -27,12 +27,12 @@ class RegressorStack(BaseEstimator, RegressorMixin):
     >>> np.random.seed(0)
     >>> X = np.random.randn(10000, 4)
     >>> y = ((X[:, 0]>0) & (X[:, 1]>0)) * np.abs(X[:, 2] * X[:, 3]**2)
-    >>> z = StackedMultiRegressor(
-    ... classifier=ExtraTreesClassifier(random_state=0),
-    ... regressor=ExtraTreesRegressor(random_state=0)
+    >>> z = RegressorStack(
+    ...   [KNeighborsRegressor(), BayesianRidge()],
+    ...   regressor=ExtraTreesRegressor(random_state=0)
     ... )
     >>> z.fit(X, y)
-    StackedMultiRegressor(classifier=ExtraTreesClassifier(random_state=0),
+    RegressorStack([KNeighborsRegressor(), BayesianRidge()],
                           regressor=ExtraTreesRegressor(random_state=0))
     >>> z.predict(X)[:5]
     array([4.91483294, 0.        , 0.        , 0.04941909, 0.        ])
