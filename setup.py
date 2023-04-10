@@ -2,8 +2,8 @@
  
 """setup.py: setuptools control."""
  
+from setuptools import setup, find_packages
 import re
-from setuptools import setup
  
 version = re.search(
         '^__version__\s*=\s*"(.*)"',
@@ -16,8 +16,8 @@ with open("README.md", "rb") as f:
 
 setup(
       license="MIT",
-      name = "skduplo",
-      packages = ["skduplo"],
+      name = "scikit-duplo",
+      packages=find_packages(exclude=["notebooks", "tests"]),
       install_requires=[
         'pandas','numpy','scikit-learn'
       ],

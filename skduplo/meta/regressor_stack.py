@@ -4,7 +4,7 @@ from sklearn.utils.validation import check_is_fitted, check_X_y, check_array
 from sklearn.exceptions import NotFittedError
 from sklearn.model_selection import train_test_split
 
-class RegressorStacke(BaseEstimator, RegressorMixin):
+class RegressorStack(BaseEstimator, RegressorMixin):
     """
     A meta regressor for doing model stacking for regression using underlying 
     quantile propensity models and internal regressors.
