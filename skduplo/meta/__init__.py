@@ -1,6 +1,8 @@
 __all__ = [
     "RegressorStack",
-    "QuantileStackRegressor"
+    "QuantileStackRegressor",
+    "BaselineProportionalRegressor"
 ]
-from .quantile_stack_regressor import QuantileStackRegressor
 from .regressor_stack import RegressorStack
+from .quantile_stack_regressor import QuantileStackRegressor
+from .baseline_proportional_regressor import BaselineProportionalRegressor
