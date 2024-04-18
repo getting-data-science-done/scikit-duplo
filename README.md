@@ -32,5 +32,7 @@ There are feature engineering classes inside the `preprocessing` subdirectory. T
 ColumnTransformer compatible classes that expect to receive a dataframe and set of column
 names that it will transform for the downstream pipeline processes.
 
+LookupEncoder allows you to provide a custon dictionary of values for encoding categorical
+variables.
 
 
