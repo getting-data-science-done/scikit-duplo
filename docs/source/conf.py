@@ -21,7 +21,7 @@ copyright = '2023, John Hawkins'
 author = 'John Hawkins'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.5'
+release = '0.1.10'
 
 
 # -- General configuration ---------------------------------------------------
