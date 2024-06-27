@@ -56,3 +56,21 @@ In the example below we include a MultiStackRegressor in a prediction pipeline.
 
 Note that the `regressor_list` parameter is an arbitrary list of sklearn compatible regressors
 that the model will train internally on cross validated data to make intermediate predictions.
+
+LookupEncoder
+**********************
+
+You can incorporate LookupEncoder at the pre-processing stage of your ML model. 
+It creates an instance of a given lookup table and serialises the lookup table into the ML model. 
+
+.. code-block:: python
+    from skduplo.preprocessing import LookupEncoder
+
+    lookup_table = {'A1': 1, 'A2': 2, 'A3': 3,'A4': 4, 
+                    'B1': 5, 'B2': 6,'B3': 7, 'B4': 8}
+    default_value = 4.5
+    lookup_encoder = LookupEncoder(column_name='target_column', lookup_table=lookup_table, default_value=default_value)
+
+This `lookup_encoder` can now be serialised in a ML model. 
+At the training time or during inference, the model will map the elements of `target column` as per the given lookup_table.
+If the `target_column` elements are not in the given list (in this case: A1, A2, A3, A4, B1, B2, B3, B4), then the `default_value` will be mapped instead.
